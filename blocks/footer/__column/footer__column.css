@@ -1,0 +1,37 @@
+.footer__column_content_copyright {
+    flex-basis: 711px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__author {
+    margin: 18px 0;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.footer__column-heading{
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.footer__column-link {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}

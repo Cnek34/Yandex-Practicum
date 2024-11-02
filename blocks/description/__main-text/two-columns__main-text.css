@@ -1,0 +1,21 @@
+.two-column__main-text {
+    width: 80%;
+    min-width: 784px;
+}
+
+.two-column__paragraph {
+    margin: 0 0 30px 0;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.two-column__span_accent {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.two-column__paragraph:last-child {
+    margin: 0;
+}

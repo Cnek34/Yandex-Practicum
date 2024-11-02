@@ -1,0 +1,31 @@
+.cards__item {
+    width: 240px;
+    margin-top: 60px;
+}
+
+.cards__image {
+    margin: 0;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: 0 40px;
+}
+
+.cards__title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 43px;
+}
+
+.cards__description {
+    margin: 0;
+    padding: 0;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 16px;
+}

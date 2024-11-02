@@ -1,0 +1,21 @@
+.khan__book-container {
+    margin-top: 68px;
+    display: flex;
+}
+
+.khan__book-pic {
+    width: 620px;
+    height: 608px;
+    margin-right: 48px;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.khan__buy-link {
+    margin: 0;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #2f80ed;
+}

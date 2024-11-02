@@ -1,0 +1,13 @@
+.description {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}

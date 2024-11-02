@@ -1,0 +1,31 @@
+.khan__author {
+    margin: 0;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.khan__quote {
+    margin: 0;
+    width: 790px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+.khan__quote-author {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 36px;
+}
+
+.khan__quote-author-subline {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 10px;
+}

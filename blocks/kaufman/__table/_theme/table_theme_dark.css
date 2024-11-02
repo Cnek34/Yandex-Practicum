@@ -1,0 +1,22 @@
+.table__heading_theme_dark {
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.table__text_theme_dark {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
