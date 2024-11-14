@@ -1,0 +1,23 @@
+.header__lang-link {
+    color: #fff;
+    text-decoration: none; /* no underline */
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.header__lang-links {
+    display: flex;
+    gap: 18px;
+}
+
+.header__lang-link:hover {
+    border-bottom: 2px #fff solid;
+}
+
+@media screen and (max-width: 425px) {
+    .header__lang-link {
+        font-size: 20px;
+        line-height: 18px;
+    }
+}

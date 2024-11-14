@@ -1,0 +1,32 @@
+.footer__link {
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer__links {
+    max-width: 462px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    justify-self: start;
+}
+
+.footer__link:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 425px) {
+    .footer__links {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer__link {
+        line-height: 24px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,21 @@
+.cover {
+    max-width: 1184px;
+    max-height: 740px;
+    margin: 92px auto 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cover__text {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    z-index: 2;
+}
+
+@media screen and (max-width: 425px) {
+    .cover {
+        margin: 66px auto 0;
+    }
+}

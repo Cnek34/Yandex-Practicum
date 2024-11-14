@@ -1,0 +1,25 @@
+.places__url-heading {
+    margin-bottom: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #AAA;
+}
+
+.places__link {
+    margin: 0;
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+}
+
+.places__website {
+    align-self: end;
+    max-width: 456px;
+}
+
+.places__link:hover {
+    border-bottom: 1px #fff solid;
+}

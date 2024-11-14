@@ -1,0 +1,17 @@
+.intro__list {
+    margin-top: 33px 0 0;
+    list-style: none;
+    padding: 0;
+}
+
+.intro__label {
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.intro__value {
+    font-weight: normal;
+}

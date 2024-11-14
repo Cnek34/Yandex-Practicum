@@ -1,0 +1,14 @@
+.footer {
+    max-width: 1184px;
+    margin: 90px auto 24px;
+    display: grid;
+    grid-template-columns: auto 189px;
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        grid-template-columns: 1fr;
+        margin: 64px auto 0;
+        row-gap: 48px;
+    }
+}
