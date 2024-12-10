@@ -1,0 +1,17 @@
+.popup__form {
+  margin-top: 27px;
+}
+
+.form__input-error {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
+
+.form__input-error_active {
+  display: block;
+}
+
+.form__input-error:last-of-type {
+  margin-top: 10px;
+}

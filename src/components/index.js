@@ -1,3 +1,11 @@
+import { initialCards } from './cards.js';
+import { enableValidation } from './validate.js';
+import { createCard } from './card.js';
+import { openModal, closeModal, popupCloseOverlay } from './modal.js';
+
+export { popupImage, popupCaption, imagePopup };
+
+
 const placesList = document.querySelector('.places__list')
 
 const profilePopup = document.querySelector('.popup_type_edit')
@@ -17,51 +25,11 @@ const popupCloseButtonImage = document.querySelector('.popup_type_image .popup__
 const popupImage = document.querySelector('.popup__image')
 const popupCaption = document.querySelector('.popup__caption')
 
-function createCard(item) {
-    let cardTemplate = document.querySelector('#card-template').content;
-    let cardElement = cardTemplate.querySelector('.places__item').cloneNode(true);
 
-    let cardLink = cardElement.querySelector('.card__image');
-    let cardName = cardElement.querySelector('.card__title');
-    let cardLikeButton = cardElement.querySelector('.card__like-button');
-    let cardDeleteButton = cardElement.querySelector('.card__delete-button');
-
-    cardLink.src = item.link;
-    cardName.textContent = item.name;
-
-    cardLikeButton.addEventListener('click', function () {
-        cardLikeButton.classList.toggle('card__like-button_is-active')
-    })
-
-    cardElement.dataset.link = item.link;
-
-    cardDeleteButton.addEventListener('click', function (evt) {
-        const card = evt.target.closest('.places__item');
-        card.remove();
-
-        const index = initialCards.findIndex((cardItem) => cardItem.link === card.dataset.link);
-        if (index !== -1) {
-            initialCards.splice(index, 1);
-        }
-    });
-
-    cardLink.addEventListener('click', function () {
-        popupImage.src = item.link;
-        popupCaption.textContent = item.name;
-        openModal(imagePopup)
-    })
-
-    return cardElement;
-}
 
 initialCards.forEach(item => {
     placesList.append(createCard(item));
 })
-
-
-function openModal(popup) {      
-    popup.classList.add('popup_is-opened');
-}
 
 profileEditButton.addEventListener('click', function () {
     const nameOutput = document.querySelector('.profile__title');
@@ -69,11 +37,8 @@ profileEditButton.addEventListener('click', function () {
     nameInput.value = nameOutput.textContent
     jobInput.value = jobOutput.textContent
     openModal(profilePopup);
+    popupCloseOverlay(profilePopup);
 })
-
-function closeModal(popup) {      
-    popup.classList.remove('popup_is-opened');
-}
 
 popupCloseButtonProfileEdit.addEventListener('click', () => closeModal(profilePopup))
 popupCloseButtonCardAdd.addEventListener('click', () => closeModal(cardPopup))
@@ -83,8 +48,8 @@ popupCloseButtonImage.addEventListener('click', () => closeModal(imagePopup))
 // Находим форму в DOM
 const profileFormElement = document.querySelector('.popup_type_edit').querySelectorAll('.popup__form')[0]
 // Находим поля формы в DOM
-const nameInput = document.querySelector('.popup__input_type_name')
-const jobInput = document.querySelector('.popup__input_type_description')
+const nameInput = profilePopup.querySelector('.popup__input_type_name')
+const jobInput = profilePopup.querySelector('.popup__input_type_description')
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
@@ -113,6 +78,7 @@ profileFormElement.addEventListener('submit', handleProfileFormSubmit);
 
 profileAddButton.addEventListener('click', function () {
     openModal(cardPopup);
+    popupCloseOverlay(cardPopup);
 })
 
 const cardFormElemnt = document.querySelector('.popup_type_new-card').querySelectorAll('.popup__form')[0]
@@ -144,3 +110,20 @@ function handleCardFormSubmit(evt) {
 }
 
 cardFormElemnt.addEventListener('submit', handleCardFormSubmit);
+
+
+// Создание объекта с настройками валидации
+
+const validationSettings = {
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button',
+    inactiveButtonClass: 'popup__button_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+}
+  
+  // включение валидации вызовом enableValidation
+  // все настройки передаются при вызове
+  
+enableValidation(validationSettings);
