@@ -1,0 +1,8 @@
+.card__like-field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
